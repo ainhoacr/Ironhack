@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nPO-WE-yNh">
+                                <rect key="frame" x="136" y="81" width="328" height="239"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="328" id="f6a-gY-kZE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7d-EW-Ghi">
+                                <rect key="frame" x="279" y="413" width="42" height="30"/>
+                                <state key="normal" title="Quote">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="quoteButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k8K-lZ-cEb"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Sfq-y0-yqg">
+                                <rect key="frame" x="200" y="451" width="200" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="gmA-vC-UIj"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="classic"/>
+                                    <segment title="modern"/>
+                                    <segment title="mine"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="g7d-EW-Ghi" firstAttribute="top" secondItem="nPO-WE-yNh" secondAttribute="bottom" constant="93" id="0xU-ri-Xdj"/>
+                            <constraint firstItem="nPO-WE-yNh" firstAttribute="centerX" secondItem="g7d-EW-Ghi" secondAttribute="centerX" id="6bq-DU-wVn"/>
+                            <constraint firstItem="g7d-EW-Ghi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A9c-ji-OAm"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="g7d-EW-Ghi" secondAttribute="bottom" constant="157" id="RM6-tH-dmP"/>
+                            <constraint firstItem="Sfq-y0-yqg" firstAttribute="top" secondItem="g7d-EW-Ghi" secondAttribute="bottom" constant="8" symbolic="YES" id="cCY-vA-QJm"/>
+                            <constraint firstAttribute="centerX" secondItem="Sfq-y0-yqg" secondAttribute="centerX" id="mv6-gq-YKb"/>
+                            <constraint firstItem="nPO-WE-yNh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="61" id="tJt-Lx-fKn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="quoteOpt" destination="Sfq-y0-yqg" id="div-ro-frP"/>
+                        <outlet property="quoteText" destination="nPO-WE-yNh" id="ThW-Ke-kWn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
