@@ -108,6 +108,7 @@ static NSUInteger const height = 40;
     [super viewDidLoad];
     [self drawQuestions];
     [self drawNextButtonIfNeeded];
+    [self drawReloadButton];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -228,5 +229,15 @@ static NSUInteger const height = 40;
 }
 
 #pragma mark - Methods tab bar
+
+- (void)drawReloadButton
+{
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(returnFirstQuestion)];
+}
+
+- (void)returnFirstQuestion
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 
 @end
