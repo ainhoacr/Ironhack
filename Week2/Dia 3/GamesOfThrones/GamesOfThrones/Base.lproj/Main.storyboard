@@ -115,6 +115,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="no_image" width="16" height="16"/>
+        <image name="no_image" width="760" height="405"/>
     </resources>
 </document>
