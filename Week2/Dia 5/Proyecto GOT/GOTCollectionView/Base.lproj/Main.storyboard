@@ -43,13 +43,14 @@
                     <navigationItem key="navigationItem" id="YgS-FX-J1z">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="uAZ-2Y-16M">
-                            <rect key="frame" x="161" y="7" width="447" height="30"/>
+                            <rect key="frame" x="126" y="7" width="517" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Vertical"/>
                                 <segment title="Horizontal"/>
                                 <segment title="Zoom"/>
                                 <segment title="CoverFlow"/>
+                                <segment title="CustomLayout"/>
                             </segments>
                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>

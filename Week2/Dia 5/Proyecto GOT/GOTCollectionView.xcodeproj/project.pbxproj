@@ -63,6 +63,7 @@
 		B40C51FB1BAC18A500156394 /* MyCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B40C51F91BAC18A500156394 /* MyCollectionReusableView.xib */; };
 		B40C51FE1BAC469900156394 /* ZoomInLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B40C51FD1BAC469900156394 /* ZoomInLayout.m */; };
 		B40C52011BAC54AD00156394 /* CoverFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B40C52001BAC54AD00156394 /* CoverFlowLayout.m */; };
+		B40C52051BAC588600156394 /* CustomViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B40C52041BAC588600156394 /* CustomViewFlowLayout.m */; };
 		B41341231BABF5D300652D8E /* margaery.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B41341221BABF5D300652D8E /* margaery.jpg */; };
 		B41341271BAC02B000652D8E /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B41341251BAC02B000652D8E /* MyCollectionViewCell.m */; };
 		B41341281BAC02B000652D8E /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B41341261BAC02B000652D8E /* MyCollectionViewCell.xib */; };
@@ -146,6 +147,8 @@
 		B40C51FD1BAC469900156394 /* ZoomInLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomInLayout.m; sourceTree = "<group>"; };
 		B40C51FF1BAC54AD00156394 /* CoverFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverFlowLayout.h; sourceTree = "<group>"; };
 		B40C52001BAC54AD00156394 /* CoverFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverFlowLayout.m; sourceTree = "<group>"; };
+		B40C52031BAC588600156394 /* CustomViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewFlowLayout.h; sourceTree = "<group>"; };
+		B40C52041BAC588600156394 /* CustomViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewFlowLayout.m; sourceTree = "<group>"; };
 		B41341221BABF5D300652D8E /* margaery.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = margaery.jpg; sourceTree = "<group>"; };
 		B41341241BAC02B000652D8E /* MyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyCollectionViewCell.h; path = ../MyCollectionViewCell.h; sourceTree = "<group>"; };
 		B41341251BAC02B000652D8E /* MyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyCollectionViewCell.m; path = ../MyCollectionViewCell.m; sourceTree = "<group>"; };
@@ -209,6 +212,7 @@
 		8CC95687194A3F3900BDD121 /* GOTCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				B40C52021BAC586400156394 /* Layouts */,
 				8CC956B6194A3F9500BDD121 /* assets */,
 				8CC956DB194A3F9600BDD121 /* model */,
 				8CC95690194A3F3900BDD121 /* AppDelegate.h */,
@@ -224,10 +228,6 @@
 				B40C51F71BAC18A500156394 /* MyCollectionReusableView.h */,
 				B40C51F81BAC18A500156394 /* MyCollectionReusableView.m */,
 				B40C51F91BAC18A500156394 /* MyCollectionReusableView.xib */,
-				B40C51FC1BAC469900156394 /* ZoomInLayout.h */,
-				B40C51FD1BAC469900156394 /* ZoomInLayout.m */,
-				B40C51FF1BAC54AD00156394 /* CoverFlowLayout.h */,
-				B40C52001BAC54AD00156394 /* CoverFlowLayout.m */,
 			);
 			path = GOTCollectionView;
 			sourceTree = "<group>";
@@ -324,6 +324,19 @@
 			);
 			name = model;
 			path = modelo;
+			sourceTree = "<group>";
+		};
+		B40C52021BAC586400156394 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				B40C51FC1BAC469900156394 /* ZoomInLayout.h */,
+				B40C51FD1BAC469900156394 /* ZoomInLayout.m */,
+				B40C51FF1BAC54AD00156394 /* CoverFlowLayout.h */,
+				B40C52001BAC54AD00156394 /* CoverFlowLayout.m */,
+				B40C52031BAC588600156394 /* CustomViewFlowLayout.h */,
+				B40C52041BAC588600156394 /* CustomViewFlowLayout.m */,
+			);
+			name = Layouts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -463,6 +476,7 @@
 			files = (
 				B40C51FE1BAC469900156394 /* ZoomInLayout.m in Sources */,
 				B40C52011BAC54AD00156394 /* CoverFlowLayout.m in Sources */,
+				B40C52051BAC588600156394 /* CustomViewFlowLayout.m in Sources */,
 				8CC95698194A3F3900BDD121 /* ViewController.m in Sources */,
 				B41341271BAC02B000652D8E /* MyCollectionViewCell.m in Sources */,
 				8CC95706194A3F9600BDD121 /* GotModel.m in Sources */,
