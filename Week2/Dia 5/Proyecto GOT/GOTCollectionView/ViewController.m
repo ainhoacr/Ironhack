@@ -10,11 +10,13 @@
 #import "GotModel.h"
 #import "MyCollectionViewCell.h"
 #import "Character.h"
+#import "House.h"
 
 @interface ViewController () <UICollectionViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *myCollectionView;
 @property (strong, nonatomic) IBOutlet GotModel *myGotModel;
+@property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *myLayout;
 
 @end
 
@@ -27,6 +29,7 @@
     [self.myGotModel loadModel];
     
     [self.myCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([MyCollectionViewCell class]) bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"cell"];
+    self.myLayout.headerReferenceSize = CGSizeMake(100, 100);
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,7 +42,8 @@
 {
     MyCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     
-    Character *character = self.myGotModel.characters[[indexPath row]];
+    House *house = self.myGotModel.houses[[indexPath section]];
+    Character *character = house.characters[[indexPath row]];
     NSString *nameImage = [NSString stringWithFormat:@"%@.jpg",character.image];
     cell.myImageView.image = [UIImage imageNamed:nameImage];
     
@@ -48,6 +52,12 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return [self.myGotModel.characters count];
+    House *house = self.myGotModel.houses[section];
+    return [house.characters count];
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return [self.myGotModel.houses count];
 }
 @end

@@ -18,8 +18,10 @@
 
 - (void)personalizeCell
 {
-    self.myImageView.layer.borderWidth = 2.0;
+    self.myImageView.layer.borderWidth = 3.0;
     self.myImageView.layer.borderColor = [[UIColor whiteColor] CGColor];
+    self.myImageView.clipsToBounds = YES;
+    self.myImageView.layer.cornerRadius = 10;
 }
 
 @end
