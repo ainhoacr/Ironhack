@@ -13,6 +13,7 @@
 #import "MyCollectionViewCell.h"
 #import "MyCollectionReusableView.h"
 #import "ZoomInLayout.h"
+#import "CoverFlowLayout.h"
 
 @interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -22,6 +23,7 @@
 @property (strong, nonatomic) UICollectionViewFlowLayout *myLayoutHorizontal;
 @property (strong, nonatomic) NSMutableSet *selectedItems;
 @property (strong, nonatomic) ZoomInLayout *myZoomLayout;
+@property (strong, nonatomic) CoverFlowLayout *myCoverFlowLayout;
 
 @end
 
@@ -33,6 +35,7 @@
     
     [self.myGotModel loadModel];
     self.myZoomLayout = [[ZoomInLayout alloc]init];
+    self.myCoverFlowLayout = [[CoverFlowLayout alloc]init];
     
     [self.myCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([MyCollectionViewCell class]) bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"cell"];
     [self.myCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([MyCollectionReusableView class]) bundle:[NSBundle mainBundle]] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
@@ -63,6 +66,10 @@
         
         case 2:
             [self.myCollectionView setCollectionViewLayout:self.myZoomLayout animated:YES];
+            break;
+        
+        case 3:
+            [self.myCollectionView setCollectionViewLayout:self.myCoverFlowLayout animated:YES];
             break;
             
         default:
