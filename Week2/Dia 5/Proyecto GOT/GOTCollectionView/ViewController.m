@@ -17,7 +17,8 @@
 
 @property (weak, nonatomic) IBOutlet UICollectionView *myCollectionView;
 @property (strong, nonatomic) IBOutlet GotModel *myGotModel;
-@property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *myLayout;
+@property (strong, nonatomic) UICollectionViewFlowLayout *myLayoutVertical;
+@property (strong, nonatomic) UICollectionViewFlowLayout *myLayoutHorizontal;
 
 @end
 
@@ -26,13 +27,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
     [self.myGotModel loadModel];
     
     [self.myCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([MyCollectionViewCell class]) bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"cell"];
     [self.myCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([MyCollectionReusableView class]) bundle:[NSBundle mainBundle]] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
     
-    self.myLayout.headerReferenceSize = CGSizeMake(100, 100);
+    [self.myCollectionView setCollectionViewLayout:self.myLayoutVertical animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,6 +41,26 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark Methods Segmented Control
+
+- (IBAction)chageValueSegmentedControl:(UISegmentedControl *)segmentedControl
+{
+    switch (segmentedControl.selectedSegmentIndex) {
+        case 0:
+            [self.myCollectionView setCollectionViewLayout:self.myLayoutVertical animated:YES];
+            break;
+            
+        case 1:
+            [self.myCollectionView setCollectionViewLayout:self.myLayoutHorizontal animated:YES];
+            break;
+            
+        default:
+            break;
+    }
+}
+
+#pragma mark Methods Collection View
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -73,4 +94,33 @@
     
     return myCollectionReusableView;
 }
+
+#pragma mark - Lazy Loads
+
+- (UICollectionViewFlowLayout *)myLayoutHorizontal
+{
+    if (!_myLayoutHorizontal) {
+        _myLayoutHorizontal = [[UICollectionViewFlowLayout alloc]init];
+        _myLayoutHorizontal.itemSize = CGSizeMake(200, 200);
+        _myLayoutHorizontal.sectionInset = UIEdgeInsetsMake(20, 0, 20, 0);
+        _myLayoutHorizontal.headerReferenceSize = CGSizeMake(200, 100);
+        _myLayoutHorizontal.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    }
+    
+    return _myLayoutHorizontal;
+}
+
+- (UICollectionViewFlowLayout *)myLayoutVertical
+{
+    if (!_myLayoutVertical) {
+        _myLayoutVertical = [[UICollectionViewFlowLayout alloc]init];
+        _myLayoutVertical.itemSize = CGSizeMake(200, 200);
+        _myLayoutVertical.sectionInset = UIEdgeInsetsMake(20, 0, 20, 0);
+        _myLayoutVertical.headerReferenceSize = CGSizeMake(100, 100);
+        _myLayoutVertical.scrollDirection = UICollectionViewScrollDirectionVertical;
+    }
+    
+    return _myLayoutVertical;
+}
+
 @end

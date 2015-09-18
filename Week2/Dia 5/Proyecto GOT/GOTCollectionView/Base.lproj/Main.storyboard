@@ -41,11 +41,23 @@
                             <constraint firstItem="WLl-QI-KDX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kX7-qv-k7s"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="YgS-FX-J1z"/>
+                    <navigationItem key="navigationItem" id="YgS-FX-J1z">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="uAZ-2Y-16M">
+                            <rect key="frame" x="231" y="7" width="307" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Vertical"/>
+                                <segment title="Horizontal"/>
+                            </segments>
+                            <connections>
+                                <action selector="chageValueSegmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="O2Z-8X-QcK"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
                     <connections>
                         <outlet property="myCollectionView" destination="WLl-QI-KDX" id="cMZ-ac-p8p"/>
                         <outlet property="myGotModel" destination="ZZZ-j3-DTy" id="833-hl-bCh"/>
-                        <outlet property="myLayout" destination="uNc-Q0-k9w" id="4aH-pg-O4n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
