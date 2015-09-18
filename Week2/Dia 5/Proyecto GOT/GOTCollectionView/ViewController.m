@@ -12,6 +12,7 @@
 #import "House.h"
 #import "MyCollectionViewCell.h"
 #import "MyCollectionReusableView.h"
+#import "ZoomInLayout.h"
 
 @interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -20,6 +21,7 @@
 @property (strong, nonatomic) UICollectionViewFlowLayout *myLayoutVertical;
 @property (strong, nonatomic) UICollectionViewFlowLayout *myLayoutHorizontal;
 @property (strong, nonatomic) NSMutableSet *selectedItems;
+@property (strong, nonatomic) ZoomInLayout *myZoomLayout;
 
 @end
 
@@ -30,6 +32,7 @@
     [super viewDidLoad];
     
     [self.myGotModel loadModel];
+    self.myZoomLayout = [[ZoomInLayout alloc]init];
     
     [self.myCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([MyCollectionViewCell class]) bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"cell"];
     [self.myCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([MyCollectionReusableView class]) bundle:[NSBundle mainBundle]] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
@@ -56,6 +59,10 @@
             
         case 1:
             [self.myCollectionView setCollectionViewLayout:self.myLayoutHorizontal animated:YES];
+            break;
+        
+        case 2:
+            [self.myCollectionView setCollectionViewLayout:self.myZoomLayout animated:YES];
             break;
             
         default:
