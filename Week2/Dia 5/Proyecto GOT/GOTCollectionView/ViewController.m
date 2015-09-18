@@ -8,9 +8,10 @@
 
 #import "ViewController.h"
 #import "GotModel.h"
-#import "MyCollectionViewCell.h"
 #import "Character.h"
 #import "House.h"
+#import "MyCollectionViewCell.h"
+#import "MyCollectionReusableView.h"
 
 @interface ViewController () <UICollectionViewDataSource>
 
@@ -29,6 +30,8 @@
     [self.myGotModel loadModel];
     
     [self.myCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([MyCollectionViewCell class]) bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"cell"];
+    [self.myCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([MyCollectionReusableView class]) bundle:[NSBundle mainBundle]] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
+    
     self.myLayout.headerReferenceSize = CGSizeMake(100, 100);
 }
 
@@ -59,5 +62,15 @@
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
     return [self.myGotModel.houses count];
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    MyCollectionReusableView *myCollectionReusableView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"header" forIndexPath:indexPath];
+    
+    House *house = self.myGotModel.houses[[indexPath section]];
+    myCollectionReusableView.myLabel.text = house.name;
+    
+    return myCollectionReusableView;
 }
 @end
