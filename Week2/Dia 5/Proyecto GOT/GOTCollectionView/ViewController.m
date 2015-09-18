@@ -13,12 +13,13 @@
 #import "MyCollectionViewCell.h"
 #import "MyCollectionReusableView.h"
 
-@interface ViewController () <UICollectionViewDataSource>
+@interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *myCollectionView;
 @property (strong, nonatomic) IBOutlet GotModel *myGotModel;
 @property (strong, nonatomic) UICollectionViewFlowLayout *myLayoutVertical;
 @property (strong, nonatomic) UICollectionViewFlowLayout *myLayoutHorizontal;
+@property (strong, nonatomic) NSMutableSet *selectedItems;
 
 @end
 
@@ -34,6 +35,8 @@
     [self.myCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([MyCollectionReusableView class]) bundle:[NSBundle mainBundle]] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
     
     [self.myCollectionView setCollectionViewLayout:self.myLayoutVertical animated:YES];
+    self.myCollectionView.allowsMultipleSelection = YES;
+    self.myCollectionView.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,6 +61,31 @@
         default:
             break;
     }
+}
+
+#pragma mark Methods Bar Button Item
+
+- (IBAction)trashPressed:(UIBarButtonItem *)sender
+{
+    [self.myCollectionView performBatchUpdates:^{
+        {
+            [self.myCollectionView deleteItemsAtIndexPaths:[self.selectedItems allObjects]];
+            [self.myGotModel removeCharacters:self.selectedItems];
+            self.selectedItems = nil;
+        }
+    } completion:nil];
+}
+
+#pragma mark Methods Collection View Delegate
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.selectedItems addObject:indexPath];
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.selectedItems removeObject:indexPath];
 }
 
 #pragma mark Methods Collection View
@@ -116,11 +144,19 @@
         _myLayoutVertical = [[UICollectionViewFlowLayout alloc]init];
         _myLayoutVertical.itemSize = CGSizeMake(200, 200);
         _myLayoutVertical.sectionInset = UIEdgeInsetsMake(20, 0, 20, 0);
-        _myLayoutVertical.headerReferenceSize = CGSizeMake(100, 100);
+        _myLayoutVertical.headerReferenceSize = CGSizeMake(200, 100);
         _myLayoutVertical.scrollDirection = UICollectionViewScrollDirectionVertical;
     }
     
     return _myLayoutVertical;
+}
+
+-(NSMutableSet *)selectedItems
+{
+    if (!_selectedItems) {
+        _selectedItems = [[NSMutableSet alloc]init];
+    }
+    return _selectedItems;
 }
 
 @end

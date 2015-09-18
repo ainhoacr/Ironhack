@@ -13,27 +13,19 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arya.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="8gq-Oi-Szx">
-                        <rect key="frame" x="8" y="0.0" width="584" height="600"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arya.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="8gq-Oi-Szx">
+                        <rect key="frame" x="16" y="0.0" width="568" height="600"/>
                     </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <constraints>
-                <constraint firstItem="8gq-Oi-Szx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="CHO-9b-0L3"/>
-                <constraint firstItem="8gq-Oi-Szx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="MPh-mL-aRz"/>
-                <constraint firstAttribute="trailing" secondItem="8gq-Oi-Szx" secondAttribute="trailing" constant="8" id="MQS-hK-Eif"/>
+                <constraint firstItem="8gq-Oi-Szx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="MPh-mL-aRz"/>
+                <constraint firstAttribute="trailing" secondItem="8gq-Oi-Szx" secondAttribute="trailing" constant="16" id="MQS-hK-Eif"/>
                 <constraint firstAttribute="bottom" secondItem="8gq-Oi-Szx" secondAttribute="bottom" id="QTn-Br-bMo"/>
                 <constraint firstItem="8gq-Oi-Szx" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hLY-99-euR"/>
-                <constraint firstAttribute="trailing" secondItem="8gq-Oi-Szx" secondAttribute="trailing" id="p2U-6e-Cbe"/>
             </constraints>
             <size key="customSize" width="536" height="555"/>
-            <variation key="default">
-                <mask key="constraints">
-                    <exclude reference="CHO-9b-0L3"/>
-                    <exclude reference="p2U-6e-Cbe"/>
-                </mask>
-            </variation>
             <connections>
                 <outlet property="myImageView" destination="8gq-Oi-Szx" id="P7T-xx-PWN"/>
             </connections>
