@@ -11,6 +11,7 @@
 @interface DragView ()
 
 @property (nonatomic, weak) UIView *dragView;
+@property (nonatomic, strong) NSMutableArray *mySubViews;
 
 @end
 
@@ -18,19 +19,43 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-    
+ 
     if (touches.count == 1)
     {
         UITouch *touch = [touches anyObject];
-        UIView *view = [[UIView alloc]init];
-        view.backgroundColor = [UIColor redColor];
         CGPoint point = [touch locationInView:self];
-        view.frame = CGRectMake(point.x, point.y, 100, 100);
-        view.center = point;
-        [self addSubview:view];
-        self.dragView = view;
+        UIView *view = [[UIView alloc]init];
+
+        for (int i=0; i<[self.mySubViews count]; i++) {
+        
+            UIView *subView = self.mySubViews[i];
+            
+            if (CGRectContainsPoint(subView.frame, point))
+            {
+                [self setPreferencesView:subView withPoint:point];
+            }
+            else
+            {
+                [self setPreferencesView:view withPoint:point];
+                [self.mySubViews addObject:view];
+            }
+        }
+        
+        if ([self.mySubViews count] == 0)
+        {
+            [self setPreferencesView:view withPoint:point];
+            [self.mySubViews addObject:view];
+        }
     }
+}
+
+- (void)setPreferencesView:(UIView *)view withPoint:(CGPoint)point
+{
+    view.backgroundColor = [UIColor redColor];
+    view.frame = CGRectMake(point.x, point.y, 100, 100);
+    view.center = point;
+    [self addSubview:view];
+    self.dragView = view;
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
@@ -42,6 +67,15 @@
         self.dragView.center = point;
         [self addSubview:self.dragView];
     }
+}
+
+- (NSMutableArray *)mySubViews
+{
+    if (!_mySubViews) {
+        _mySubViews = [[NSMutableArray alloc]init];
+    }
+    
+    return _mySubViews;
 }
 
 @end
