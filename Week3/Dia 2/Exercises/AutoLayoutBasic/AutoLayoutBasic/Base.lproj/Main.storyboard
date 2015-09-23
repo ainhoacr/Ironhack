@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--First-->
@@ -16,26 +18,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QKt-yg-45n">
-                                <rect key="frame" x="21" y="88" width="278" height="129"/>
-                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gCt-SM-m9A">
-                                <rect key="frame" x="226" y="256" width="73" height="67"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gCt-SM-m9A" userLabel="Blue View">
+                                <rect key="frame" x="234" y="238" width="70" height="60"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="3nd-XU-mPK"/>
+                                    <constraint firstAttribute="width" constant="70" id="rp4-Td-Qcd"/>
+                                </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I have some longer text here that I want to wrap onto multiple lines." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CiL-lL-4Kt">
-                                <rect key="frame" x="21" y="256" width="197" height="67"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hcI-iH-fR9">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hcI-iH-fR9" userLabel="Pink View">
                                 <rect key="frame" x="125" y="421" width="71" height="69"/>
                                 <color key="backgroundColor" red="1" green="0.41946997209999998" blue="0.57336378990000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="7R4-wv-0pm"/>
+                                    <constraint firstAttribute="width" constant="71" id="zB2-9w-KrR"/>
+                                </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QKt-yg-45n" userLabel="Gray View">
+                                <rect key="frame" x="16" y="70" width="288" height="120"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="6fZ-Yj-tzL"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I have some longer text here that I want to wrap onto multiple lines." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CiL-lL-4Kt">
+                                <rect key="frame" x="16" y="238" width="213" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="gCt-SM-m9A" secondAttribute="trailing" id="0c5-qI-V5c"/>
+                            <constraint firstItem="gCt-SM-m9A" firstAttribute="top" secondItem="CiL-lL-4Kt" secondAttribute="top" id="1IC-nd-bKX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QKt-yg-45n" secondAttribute="trailing" id="3HO-MC-gke"/>
+                            <constraint firstItem="QKt-yg-45n" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="6Lu-qe-KHw"/>
+                            <constraint firstItem="CiL-lL-4Kt" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="SDd-f2-eWm"/>
+                            <constraint firstItem="gCt-SM-m9A" firstAttribute="top" secondItem="QKt-yg-45n" secondAttribute="bottom" constant="48" id="daV-W3-L28"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="hcI-iH-fR9" secondAttribute="bottom" constant="29" id="fRN-BV-wQY"/>
+                            <constraint firstItem="hcI-iH-fR9" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="hqa-nx-VIw"/>
+                            <constraint firstItem="QKt-yg-45n" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="50" id="t5x-Y4-wFk"/>
+                            <constraint firstItem="gCt-SM-m9A" firstAttribute="leading" secondItem="CiL-lL-4Kt" secondAttribute="trailing" constant="5" id="zed-x7-8Da"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
