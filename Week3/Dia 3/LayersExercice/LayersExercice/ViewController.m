@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "MyScrollView.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) MyScrollView *myScrollView;
+@property (nonatomic, assign) BOOL girl;
 
 @end
 
@@ -51,7 +55,7 @@
     layerImage.anchorPoint = CGPointMake(0.5, 0.5);
     layerImage.contents = (id) [UIImage imageNamed:@"Icon-60"].CGImage;
     
-    [self.view.layer insertSublayer:layerMagenta above:self.view.layer];
+    [self.view.layer insertSublayer:layerMagenta atIndex:0];
     [self.view.layer insertSublayer:layerGreen above:layerMagenta];
     [self.view.layer insertSublayer:layerRed above:layerGreen];
     [self.view.layer insertSublayer:layerImage above:layerRed];
@@ -59,7 +63,38 @@
 
 - (void)scrollLayer
 {
+    self.myScrollView = [[MyScrollView alloc]initWithFrame:CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y, self.view.bounds.size.width * 2, self.view.bounds.size.height) WithImage1:@"works" WithImage2:@"Best-script"];
+    self.girl = NO;
     
+    UIButton *buttonSwitch = [UIButton buttonWithType:UIButtonTypeSystem];
+    [buttonSwitch setTitle:@"Switch" forState:UIControlStateNormal];
+    buttonSwitch.frame = CGRectMake(150, 575, 100, 100);
+    [buttonSwitch addTarget:self action:@selector(buttonPressed) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:self.myScrollView];
+    [self.view addSubview:buttonSwitch];
 }
 
+- (void)buttonPressed
+{
+    CGFloat x = [self scrollX];
+    [UIView animateWithDuration:2.0 animations:^{
+        [self.myScrollView.layer scrollPoint:CGPointMake(x, self.view.bounds.size.height / 2)];
+        
+    }];
+}
+
+
+- (CGFloat)scrollX
+{
+    if (self.girl) {
+        self.girl = NO;
+        return 0;
+    }
+    else
+    {
+        self.girl = YES;
+        return self.view.bounds.size.width;
+    }
+}
 @end
