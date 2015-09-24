@@ -20,8 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self layers];
-    [self scrollLayer];
+    [self layers];
+//    [self scrollLayer];
 }
 
 - (void)didReceiveMemoryWarning {
