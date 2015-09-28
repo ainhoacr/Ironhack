@@ -20,7 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.myView.backgroundColor = [UIColor purpleColor];
-    //self.myView.layer.cornerRadius = self.myView.bounds.size.width / 2;
+//    self.myView.layer.cornerRadius = self.myView.bounds.size.width / 2;
 }
 
 - (void)didReceiveMemoryWarning {
