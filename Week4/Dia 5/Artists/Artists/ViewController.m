@@ -10,7 +10,10 @@
 #import "Artist.h"
 #import "ArtistService.h"
 
-@interface ViewController ()
+@interface ViewController () <UITableViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UITableView *myTableView;
+@property (nonatomic, strong) NSArray *artists;
 
 @end
 
@@ -20,11 +23,7 @@
     [super viewDidLoad];
     
     [self generateRandomArtist];
-    
-    ArtistService *artistService = [[ArtistService alloc]init];
-    [artistService artistsWithCompletion:^(NSArray * artists) {
-        NSLog(@"%@ number artists %lu", artists, artists.count);
-    }];
+    [self loadData];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -42,5 +41,33 @@
     Artist *artistRandom = [Artist randomArtist];
     Artist *artistCopy  = [artistRandom copy];
     NSLog(@"artistRandom: %@ artistCopy %@", artistRandom, artistCopy);
+}
+
+- (void)loadData
+{
+    ArtistService *artistService = [[ArtistService alloc]init];
+    [artistService artistsWithCompletion:^(NSArray * artists) {
+        self.artists = artists;
+        NSLog(@"number artists %lu", artists.count);
+        
+        [self.myTableView reloadData];
+    }];
+}
+
+#pragma mark - TableView
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.artists.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"artistCell" forIndexPath:indexPath];
+    
+    Artist *artist = [self.artists objectAtIndex:indexPath.item];
+    cell.textLabel.text = artist.name;
+    
+    return cell;
 }
 @end

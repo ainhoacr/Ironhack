@@ -23,7 +23,13 @@
         
         NSArray *arrayArtist = [self parserJSON:arrayJSON];
         
-        completion(arrayArtist);
+        if (completion)
+        {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completion(arrayArtist);
+            });
+            
+        }
         
     }];
     [sessionDataTask resume];
