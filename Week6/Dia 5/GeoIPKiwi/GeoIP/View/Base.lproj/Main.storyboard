@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bgW-48-UmR">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Geo IP 😱-->
+        <scene sceneID="hug-pb-k4i">
+            <objects>
+                <tableViewController id="6fW-Tq-zvh" customClass="GeoIPViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="67" sectionHeaderHeight="28" sectionFooterHeight="28" id="YHL-ap-EaW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GeoIPCell" rowHeight="67" id="MMi-W4-TgS" customClass="GeoIPCell">
+                                <rect key="frame" x="0.0" y="92" width="600" height="67"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MMi-W4-TgS" id="JcX-On-hkG">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="66"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jpm-fN-LXB" userLabel="IP">
+                                            <rect key="frame" x="542" y="16" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="yBd-Gj-WTy" userLabel="Country">
+                                            <rect key="frame" x="16" y="16" width="511" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Jpm-fN-LXB" firstAttribute="top" secondItem="JcX-On-hkG" secondAttribute="topMargin" constant="8" id="Snf-U9-QiD"/>
+                                        <constraint firstItem="yBd-Gj-WTy" firstAttribute="leading" secondItem="JcX-On-hkG" secondAttribute="leadingMargin" constant="8" id="Xtr-ok-qpg"/>
+                                        <constraint firstItem="yBd-Gj-WTy" firstAttribute="top" secondItem="JcX-On-hkG" secondAttribute="topMargin" id="ZQ7-6p-9G8"/>
+                                        <constraint firstItem="yBd-Gj-WTy" firstAttribute="top" secondItem="JcX-On-hkG" secondAttribute="topMargin" constant="8" id="Zx1-D1-iXe"/>
+                                        <constraint firstItem="Jpm-fN-LXB" firstAttribute="leading" secondItem="yBd-Gj-WTy" secondAttribute="trailing" constant="15" id="iJ5-aK-PEg"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="yBd-Gj-WTy" secondAttribute="bottom" id="nKf-ru-8IA"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Jpm-fN-LXB" secondAttribute="trailing" constant="8" id="s1u-Qn-bTO"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="ZQ7-6p-9G8"/>
+                                            <exclude reference="nKf-ru-8IA"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="countryLabel" destination="yBd-Gj-WTy" id="JnA-HL-hDc"/>
+                                    <outlet property="ipLabel" destination="Jpm-fN-LXB" id="YJn-CF-Wzb"/>
+                                    <segue destination="KsM-3o-Gt5" kind="show" identifier="detailGeoIPSegue" id="JkW-6o-xwZ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6fW-Tq-zvh" id="t5w-ya-klt"/>
+                            <outlet property="delegate" destination="6fW-Tq-zvh" id="eQ7-9m-oCd"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Geo IP 😱" id="259-Sl-j3M">
+                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="k8v-Wy-BfM">
+                            <connections>
+                                <action selector="deleteObjects:" destination="6fW-Tq-zvh" id="4lL-WV-N2A"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Insert Massive 👻" id="khV-ud-b7D">
+                            <connections>
+                                <action selector="megaSuperEvilInsert:" destination="6fW-Tq-zvh" id="lCX-1Y-wr0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gsY-uP-8Jo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1271" y="347"/>
+        </scene>
+        <!--GeoIP Detail View Controller-->
+        <scene sceneID="BRn-M8-mUG">
+            <objects>
+                <viewController id="KsM-3o-Gt5" customClass="GeoIPDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oew-UG-mmy"/>
+                        <viewControllerLayoutGuide type="bottom" id="a9x-np-RwI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xag-m4-dHY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1KX-xG-ZCp">
+                                <rect key="frame" x="0.0" y="44" width="600" height="527"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="a9x-np-RwI" firstAttribute="top" secondItem="1KX-xG-ZCp" secondAttribute="bottom" constant="-20" id="3VK-yW-BN1"/>
+                            <constraint firstItem="1KX-xG-ZCp" firstAttribute="top" secondItem="oew-UG-mmy" secondAttribute="bottom" constant="-20" id="I0k-dT-SQL"/>
+                            <constraint firstItem="1KX-xG-ZCp" firstAttribute="leading" secondItem="xag-m4-dHY" secondAttribute="leadingMargin" constant="-20" id="hc8-v2-XN7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1KX-xG-ZCp" secondAttribute="trailing" constant="-20" id="uXN-nV-ZSH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="1KX-xG-ZCp" id="Yjt-m0-gxP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lc1-Sp-rlQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2009" y="347"/>
+        </scene>
+        <!--List-->
+        <scene sceneID="4gB-pQ-TPe">
+            <objects>
+                <navigationController id="T3V-hY-DqL" customClass="RotatingNavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="List" id="mVg-v8-eA2"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YQk-PG-gNc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6fW-Tq-zvh" kind="relationship" relationship="rootViewController" id="B2h-On-U4W"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xMz-9t-R0o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="516" y="347"/>
+        </scene>
+        <!--Rotating Tab Bar Controller-->
+        <scene sceneID="I6q-Yf-7qz">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="bgW-48-UmR" customClass="RotatingTabBarController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="f40-Ea-FDC">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="T3V-hY-DqL" kind="relationship" relationship="viewControllers" id="mdc-qz-qBU"/>
+                        <segue destination="z5L-Ta-sW1" kind="relationship" relationship="viewControllers" id="nci-kL-8yP"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PNL-k0-Erp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-296" y="347"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="ldB-De-VHY">
+            <objects>
+                <viewController id="z5L-Ta-sW1" customClass="GeoAllIPViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wRx-c3-GYa"/>
+                        <viewControllerLayoutGuide type="bottom" id="sgT-Dl-wZl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pz3-2W-soG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Fof-8j-3bc">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="620"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fof-8j-3bc" secondAttribute="trailing" constant="-20" id="2O7-QI-61n"/>
+                            <constraint firstItem="sgT-Dl-wZl" firstAttribute="top" secondItem="Fof-8j-3bc" secondAttribute="bottom" constant="-20" id="PyL-tO-dY2"/>
+                            <constraint firstItem="Fof-8j-3bc" firstAttribute="top" secondItem="wRx-c3-GYa" secondAttribute="bottom" constant="-20" id="oze-BD-cYg"/>
+                            <constraint firstItem="Fof-8j-3bc" firstAttribute="leading" secondItem="Pz3-2W-soG" secondAttribute="leadingMargin" constant="-20" id="p0P-Nt-yEN"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" id="ZzB-Ll-8dL"/>
+                    <connections>
+                        <outlet property="map" destination="Fof-8j-3bc" id="jRP-mr-9Cd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7q3-oD-WVM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="516" y="1072"/>
+        </scene>
+    </scenes>
+</document>

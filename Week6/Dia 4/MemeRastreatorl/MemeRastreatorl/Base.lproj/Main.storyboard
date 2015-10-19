@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lA2-tG-ETz" customClass="SKView">
+                                <rect key="frame" x="20" y="20" width="560" height="560"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wad-rK-ZKd">
+                                        <rect key="frame" x="239" y="497" width="82" height="30"/>
+                                        <state key="normal" title="New Meme!"/>
+                                        <connections>
+                                            <action selector="buttonDownloadMeme:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vkt-Ip-lyg"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c7G-ia-3PT">
+                                        <rect key="frame" x="56" y="45" width="449" height="418"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="418" id="CuB-hN-YJl"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.61881904099999996" green="0.96732676139999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="c7G-ia-3PT" firstAttribute="centerX" secondItem="lA2-tG-ETz" secondAttribute="centerX" id="4a0-mz-J2U"/>
+                                    <constraint firstItem="c7G-ia-3PT" firstAttribute="centerX" secondItem="wad-rK-ZKd" secondAttribute="centerX" id="dHt-7r-91O"/>
+                                    <constraint firstItem="c7G-ia-3PT" firstAttribute="top" secondItem="lA2-tG-ETz" secondAttribute="top" constant="45" id="lPE-aI-t9c"/>
+                                    <constraint firstAttribute="bottom" secondItem="wad-rK-ZKd" secondAttribute="bottom" constant="33" id="na7-Nn-NRf"/>
+                                    <constraint firstItem="c7G-ia-3PT" firstAttribute="leading" secondItem="lA2-tG-ETz" secondAttribute="leading" constant="56" id="q8e-ec-VxD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lA2-tG-ETz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Ann-WS-OIk"/>
+                            <constraint firstAttribute="bottom" secondItem="lA2-tG-ETz" secondAttribute="bottom" constant="20" symbolic="YES" id="N8g-2M-H4B"/>
+                            <constraint firstItem="lA2-tG-ETz" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="OuT-OA-l35"/>
+                            <constraint firstItem="lA2-tG-ETz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wvI-xT-Yfp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="c7G-ia-3PT" id="NQx-jr-GbD"/>
+                        <outlet property="scene" destination="lA2-tG-ETz" id="lC0-yD-ZJc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="331" y="361"/>
+        </scene>
+    </scenes>
+</document>

@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Artist : NSObject <NSCopying>
+@interface Artist : NSObject <NSCopying, NSCoding>
 
+@property (nonatomic, assign) NSUInteger artistId;
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *longDescription;
 @property (nonatomic, copy) NSString *stage;
@@ -17,6 +18,6 @@
 @property (nonatomic, strong) NSDate *startDate;
 
 + (instancetype)randomArtist;
-+ (instancetype)artistWithName:(NSString *)name WithDescription:(NSString *)description WithStage:(NSString *)stage WithImageURL:(NSURL *)imageURL WithStartDate:(NSDate *)startDate;
+- (instancetype)initWithName:(NSString *)name WithDescription:(NSString *)description WithStage:(NSString *)stage WithImageURL:(NSURL *)imageURL WithStartDate:(NSDate *)startDate WithArtistId:(NSUInteger)artistId;
 
 @end

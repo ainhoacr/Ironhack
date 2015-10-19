@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUZ-eD-E0n">
+                                <rect key="frame" x="70" y="60" width="162" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="📷"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nvR-EM-JJE"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kyra" translatesAutoresizingMaskIntoConstraints="NO" id="feD-vB-d18">
+                                <rect key="frame" x="84" y="177" width="433" height="377"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="377" id="bot-LM-NMO"/>
+                                    <constraint firstAttribute="width" constant="433" id="yMm-wq-3Jb"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUN-Uv-D72">
+                                <rect key="frame" x="368" y="60" width="162" height="30"/>
+                                <state key="normal" title="Photos"/>
+                                <connections>
+                                    <action selector="photoRoll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l4e-Lf-nia"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vdd-gn-rpt">
+                                <rect key="frame" x="262" y="60" width="76" height="30"/>
+                                <state key="normal" title="Party JARL"/>
+                                <connections>
+                                    <action selector="partyJarl:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fPl-Tf-Cin"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylr-Y3-J3Z">
+                                <rect key="frame" x="518" y="136" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWt-Ob-Fz6">
+                                <rect key="frame" x="40" y="136" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="feD-vB-d18" firstAttribute="top" secondItem="oUZ-eD-E0n" secondAttribute="bottom" constant="69" id="70F-zw-muP"/>
+                            <constraint firstItem="EWt-Ob-Fz6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Aei-X1-ogL"/>
+                            <constraint firstItem="feD-vB-d18" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E4a-t0-kAD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pUN-Uv-D72" secondAttribute="trailing" constant="50" id="EpW-fv-iWS"/>
+                            <constraint firstItem="Vdd-gn-rpt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="GNK-kl-Skz"/>
+                            <constraint firstItem="feD-vB-d18" firstAttribute="top" secondItem="ylr-Y3-J3Z" secondAttribute="bottom" constant="20" id="LB3-ZF-zOQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ylr-Y3-J3Z" secondAttribute="trailing" constant="20" id="NyK-de-eDW"/>
+                            <constraint firstItem="ylr-Y3-J3Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pdm-8d-zmr"/>
+                            <constraint firstItem="oUZ-eD-E0n" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="Q22-yt-fwn"/>
+                            <constraint firstItem="Vdd-gn-rpt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aHD-Z4-YZV"/>
+                            <constraint firstItem="feD-vB-d18" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="64" id="e6h-r4-fCv"/>
+                            <constraint firstItem="pUN-Uv-D72" firstAttribute="leading" secondItem="Vdd-gn-rpt" secondAttribute="trailing" constant="30" id="fKu-Tl-WTy"/>
+                            <constraint firstItem="pUN-Uv-D72" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="hf0-6w-iCH"/>
+                            <constraint firstItem="Vdd-gn-rpt" firstAttribute="leading" secondItem="oUZ-eD-E0n" secondAttribute="trailing" constant="30" id="izv-JG-jkp"/>
+                            <constraint firstItem="oUZ-eD-E0n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="nz4-ce-X8i"/>
+                            <constraint firstItem="feD-vB-d18" firstAttribute="top" secondItem="EWt-Ob-Fz6" secondAttribute="bottom" constant="20" id="vi1-FN-TAe"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Pdm-8d-zmr"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="feD-vB-d18" id="AiR-0U-4iF"/>
+                        <outlet property="labelBattery" destination="EWt-Ob-Fz6" id="30C-fX-CM8"/>
+                        <outlet property="labelGyro" destination="ylr-Y3-J3Z" id="E9y-h9-Qcb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="331" y="289"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="kyra" width="960" height="960"/>
+    </resources>
+</document>

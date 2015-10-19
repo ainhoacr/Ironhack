@@ -11,6 +11,8 @@
 
 @implementation Artist
 
+
+#pragma mark Initializers
 + (instancetype)randomArtist
 {
     Artist *artist = [[Artist alloc]init];
@@ -23,22 +25,28 @@
     return artist;
 }
 
-+ (instancetype)artistWithName:(NSString *)name WithDescription:(NSString *)description WithStage:(NSString *)stage WithImageURL:(NSURL *)imageURL WithStartDate:(NSDate *)startDate
+- (instancetype)initWithName:(NSString *)name WithDescription:(NSString *)description WithStage:(NSString *)stage WithImageURL:(NSURL *)imageURL WithStartDate:(NSDate *)startDate WithArtistId:(NSUInteger)artistId
 {
-    Artist *artist = [[Artist alloc]init];
-    artist.name = name;
-    artist.longDescription = description;
-    artist.stage = stage;
-    artist.imageURL = imageURL;
-    artist.startDate = startDate;
-    
-    return artist;
+    self = [super init];
+    if  (self)
+    {
+        _artistId = artistId;
+        _name = name;
+        _longDescription = description;
+        _stage = stage;
+        _imageURL = imageURL;
+        _startDate = startDate;
+    }
+        
+    return self;
 }
 
+#pragma mark - NSCopying
 - (id)copyWithZone:(NSZone *)zone
 {
     Artist *artist = [[Artist alloc]init];
     
+    artist.artistId = self.artistId;
     artist.name = [self.name copyWithZone:zone];
     artist.longDescription = [self.longDescription copyWithZone:zone];
     artist.stage = [self.stage copyWithZone:zone];
@@ -46,6 +54,40 @@
     artist.startDate = [self.startDate copyWithZone:zone];
     
     return artist;
+}
+
+#pragma mark - NSCoding
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super init];
+    
+    if (self) {
+        self.artistId = [aDecoder decodeIntegerForKey:@"id"];
+        self.name = [aDecoder decodeObjectForKey:@"name"];
+        self.longDescription = [aDecoder decodeObjectForKey:@"description"];
+        self.stage = [aDecoder decodeObjectForKey:@"stage"];
+        self.imageURL = [aDecoder decodeObjectForKey:@"image_url"];
+        self.startDate = [aDecoder decodeObjectForKey:@"start_date"];
+    }
+    
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeInteger:self.artistId forKey:@"id"];
+    [aCoder encodeObject:self.name forKey:@"name"];
+    [aCoder encodeObject:self.longDescription forKey:@"description"];
+    [aCoder encodeObject:self.stage forKey:@"stage"];
+    [aCoder encodeObject:self.imageURL forKey:@"image_url"];
+    [aCoder encodeObject:self.startDate forKey:@"start_date"];
+}
+
+#pragma mark - Equality
+
+- (NSUInteger)hash
+{
+    return _artistId;
 }
 
 @end

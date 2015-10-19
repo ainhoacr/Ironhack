@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uCb-4t-Ubh">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Radars 😍-->
+        <scene sceneID="wCk-VU-OYS">
+            <objects>
+                <tableViewController id="mqb-Fg-iLW" customClass="RadarsViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="89" sectionHeaderHeight="28" sectionFooterHeight="28" id="Jq4-K0-c0e">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RadarCell" rowHeight="90" id="o0o-pA-s98" customClass="RadarCell">
+                                <rect key="frame" x="0.0" y="92" width="600" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o0o-pA-s98" id="bKR-KA-lXn">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user@user.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJD-ZX-eTe" userLabel="Radar user email">
+                                            <rect key="frame" x="24" y="34" width="552" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radar text - fill me with radars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ycy-et-Z7Q" userLabel="Radar description">
+                                            <rect key="frame" x="24" y="-1" width="552" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="fJD-ZX-eTe" firstAttribute="leading" secondItem="bKR-KA-lXn" secondAttribute="leadingMargin" constant="16" id="FDo-kt-rnL"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="fJD-ZX-eTe" secondAttribute="trailing" constant="16" id="HFC-PX-cYe"/>
+                                        <constraint firstItem="fJD-ZX-eTe" firstAttribute="centerY" secondItem="bKR-KA-lXn" secondAttribute="centerY" id="JPE-aC-U3Q"/>
+                                        <constraint firstItem="fJD-ZX-eTe" firstAttribute="top" secondItem="Ycy-et-Z7Q" secondAttribute="bottom" constant="14" id="NBf-wk-hjT"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Ycy-et-Z7Q" secondAttribute="trailing" constant="16" id="p6J-qL-8LH"/>
+                                        <constraint firstItem="Ycy-et-Z7Q" firstAttribute="leading" secondItem="bKR-KA-lXn" secondAttribute="leadingMargin" constant="16" id="rhh-bv-OGT"/>
+                                        <constraint firstItem="Ycy-et-Z7Q" firstAttribute="centerX" secondItem="bKR-KA-lXn" secondAttribute="centerX" id="wc0-0d-8Ix"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="radarText" destination="Ycy-et-Z7Q" id="Q6K-i3-ZJl"/>
+                                    <outlet property="radarUser" destination="fJD-ZX-eTe" id="Zo1-c3-pYm"/>
+                                    <segue destination="jrH-fk-caD" kind="show" identifier="detailRadarSegue" id="gNz-TO-1H4"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SectionCell" id="w7I-s0-szT" customClass="RadarCell">
+                                <rect key="frame" x="0.0" y="182" width="600" height="89"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w7I-s0-szT" id="Dm2-me-V6J">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="88"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hV-Bp-R4T" userLabel="Radar User">
+                                            <rect key="frame" x="8" y="8" width="584" height="72"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="8hV-Bp-R4T" secondAttribute="bottom" id="H85-fM-q49"/>
+                                        <constraint firstItem="8hV-Bp-R4T" firstAttribute="leading" secondItem="Dm2-me-V6J" secondAttribute="leadingMargin" id="L5G-rw-ofM"/>
+                                        <constraint firstItem="8hV-Bp-R4T" firstAttribute="top" secondItem="Dm2-me-V6J" secondAttribute="topMargin" id="StW-so-lVI"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="8hV-Bp-R4T" secondAttribute="trailing" id="ymg-Zc-3fa"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="radarUser" destination="8hV-Bp-R4T" id="PNM-KU-yeb"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="mqb-Fg-iLW" id="Mbf-8S-aL2"/>
+                            <outlet property="delegate" destination="mqb-Fg-iLW" id="clc-iU-wNh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Radars 😍" id="bgI-Th-vCM">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="uqq-Ag-ygv">
+                            <connections>
+                                <action selector="refreshRadars:" destination="mqb-Fg-iLW" id="k1m-h4-A5c"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6lH-rI-DkV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-160" y="160"/>
+        </scene>
+        <!--Radar Detail-->
+        <scene sceneID="Bp4-qe-NVy">
+            <objects>
+                <viewController id="jrH-fk-caD" customClass="EditRadarViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fJG-CB-NgK"/>
+                        <viewControllerLayoutGuide type="bottom" id="7EI-kJ-qeQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eNZ-3A-JTh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHm-tl-7E2">
+                                <rect key="frame" x="177" y="256" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxc-mf-jZ5">
+                                <rect key="frame" x="174" y="161" width="37" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bci-lJ-3Xm" userLabel="Text User">
+                                <rect key="frame" x="200" y="192" width="200" height="46"/>
+                                <color key="backgroundColor" red="0.99796346970000005" green="1" blue="0.710031886" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="S6T-pc-iWf"/>
+                                    <constraint firstAttribute="width" constant="200" id="c5v-JB-xSw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RcE-VZ-d8V" userLabel="Text Title">
+                                <rect key="frame" x="200" y="288" width="200" height="50"/>
+                                <color key="backgroundColor" red="0.99796346970000005" green="1" blue="0.710031886" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="IhS-D9-eMM"/>
+                                    <constraint firstAttribute="height" constant="50" id="hPz-8U-fFb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sxc-mf-jZ5" firstAttribute="leading" secondItem="eNZ-3A-JTh" secondAttribute="leadingMargin" constant="154" id="1a3-Ae-HW7"/>
+                            <constraint firstItem="bci-lJ-3Xm" firstAttribute="centerX" secondItem="eNZ-3A-JTh" secondAttribute="centerX" id="3at-3R-yAx"/>
+                            <constraint firstItem="RcE-VZ-d8V" firstAttribute="leading" secondItem="eNZ-3A-JTh" secondAttribute="leadingMargin" constant="180" id="9oc-hi-4EM"/>
+                            <constraint firstItem="bci-lJ-3Xm" firstAttribute="leading" secondItem="eNZ-3A-JTh" secondAttribute="leadingMargin" constant="180" id="IZp-5c-3gm"/>
+                            <constraint firstItem="sxc-mf-jZ5" firstAttribute="top" secondItem="fJG-CB-NgK" secondAttribute="bottom" constant="97" id="Nt8-ca-Qjx"/>
+                            <constraint firstItem="bHm-tl-7E2" firstAttribute="top" secondItem="sxc-mf-jZ5" secondAttribute="bottom" constant="74" id="Qeu-Ag-qza"/>
+                            <constraint firstItem="bHm-tl-7E2" firstAttribute="leading" secondItem="eNZ-3A-JTh" secondAttribute="leadingMargin" constant="157" id="YEx-xJ-fuz"/>
+                            <constraint firstItem="bci-lJ-3Xm" firstAttribute="top" secondItem="sxc-mf-jZ5" secondAttribute="bottom" constant="10" id="fgc-y4-5Lt"/>
+                            <constraint firstItem="RcE-VZ-d8V" firstAttribute="top" secondItem="bci-lJ-3Xm" secondAttribute="bottom" constant="50" id="xyr-p1-688"/>
+                            <constraint firstItem="RcE-VZ-d8V" firstAttribute="centerX" secondItem="eNZ-3A-JTh" secondAttribute="centerX" id="zQB-0X-PSr"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="IZp-5c-3gm"/>
+                                <exclude reference="9oc-hi-4EM"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Radar Detail" id="6dN-hB-2Iq"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="titleText" destination="RcE-VZ-d8V" id="q2M-OK-XXu"/>
+                        <outlet property="userText" destination="bci-lJ-3Xm" id="boq-l5-uY7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rrc-IB-zZp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565" y="160"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OgZ-IG-trb">
+            <objects>
+                <navigationController id="uCb-4t-Ubh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vs7-TK-NNH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="mqb-Fg-iLW" kind="relationship" relationship="rootViewController" id="tkT-gm-5OW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5oE-kh-08Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1054" y="160"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,734 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B43695551BC54D7D00F08887 /* JSONParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B43695541BC54D7D00F08887 /* JSONParserTests.m */; settings = {ASSET_TAGS = (); }; };
+		B43695581BC5584800F08887 /* OneRadarResultStub.json in Resources */ = {isa = PBXBuildFile; fileRef = B43695571BC5584800F08887 /* OneRadarResultStub.json */; settings = {ASSET_TAGS = (); }; };
+		B436955C1BC562DC00F08887 /* StubFileUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B436955B1BC562DC00F08887 /* StubFileUtil.m */; settings = {ASSET_TAGS = (); }; };
+		B480D25A1BC6B78800560144 /* JSONRadarMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B480D2591BC6B78800560144 /* JSONRadarMapper.m */; settings = {ASSET_TAGS = (); }; };
+		B480D25E1BC6C96800560144 /* RadarsViewController+ACNSFetchResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = B480D25D1BC6C96800560144 /* RadarsViewController+ACNSFetchResultsController.m */; settings = {ASSET_TAGS = (); }; };
+		B480D2601BC6CE0800560144 /* EmptyRadarsArrayStub.json in Resources */ = {isa = PBXBuildFile; fileRef = B480D25F1BC6CE0800560144 /* EmptyRadarsArrayStub.json */; settings = {ASSET_TAGS = (); }; };
+		B480D2621BC6CE4300560144 /* TenRadarResultStub.json in Resources */ = {isa = PBXBuildFile; fileRef = B480D2611BC6CE4300560144 /* TenRadarResultStub.json */; settings = {ASSET_TAGS = (); }; };
+		B4D40EB21BC67C1F00484221 /* RadarJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D40EB11BC67C1F00484221 /* RadarJSON.m */; settings = {ASSET_TAGS = (); }; };
+		B4F4FDD21BC3CFB500F24AAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F4FDD11BC3CFB500F24AAE /* main.m */; };
+		B4F4FDD51BC3CFB500F24AAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F4FDD41BC3CFB500F24AAE /* AppDelegate.m */; };
+		B4F4FDDB1BC3CFB500F24AAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F4FDD91BC3CFB500F24AAE /* Main.storyboard */; };
+		B4F4FDDD1BC3CFB500F24AAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4F4FDDC1BC3CFB500F24AAE /* Assets.xcassets */; };
+		B4F4FDE01BC3CFB500F24AAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F4FDDE1BC3CFB500F24AAE /* LaunchScreen.storyboard */; };
+		B4F4FDF61BC3CFB600F24AAE /* RadarProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F4FDF51BC3CFB600F24AAE /* RadarProjectUITests.m */; };
+		B4F4FE051BC3D05800F24AAE /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F4FE041BC3D05800F24AAE /* CoreDataStack.m */; settings = {ASSET_TAGS = (); }; };
+		B4F4FE081BC3D07500F24AAE /* SharedCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F4FE071BC3D07500F24AAE /* SharedCoreDataStack.m */; settings = {ASSET_TAGS = (); }; };
+		B4F4FE0D1BC3D10400F24AAE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B4F4FE0B1BC3D10400F24AAE /* Model.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
+		B4F4FE121BC3D2C800F24AAE /* Radar+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F4FE0F1BC3D2C800F24AAE /* Radar+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		B4F4FE131BC3D2C800F24AAE /* Radar.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F4FE111BC3D2C800F24AAE /* Radar.m */; settings = {ASSET_TAGS = (); }; };
+		B4F4FE151BC3D36B00F24AAE /* RadarsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F4FE141BC3D36B00F24AAE /* RadarsTests.m */; settings = {ASSET_TAGS = (); }; };
+		B4F4FE181BC3D71300F24AAE /* FileUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F4FE171BC3D71300F24AAE /* FileUtils.m */; settings = {ASSET_TAGS = (); }; };
+		B4F4FE1E1BC3DED100F24AAE /* NSManagedObjectContext+ACInsertManageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F4FE1D1BC3DED100F24AAE /* NSManagedObjectContext+ACInsertManageObject.m */; settings = {ASSET_TAGS = (); }; };
+		B4F4FE211BC3F80100F24AAE /* FakeRadarGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F4FE201BC3F80100F24AAE /* FakeRadarGenerator.m */; settings = {ASSET_TAGS = (); }; };
+		B4F4FE241BC406FA00F24AAE /* RadarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F4FE231BC406FA00F24AAE /* RadarCell.m */; settings = {ASSET_TAGS = (); }; };
+		B4F4FE271BC40A5600F24AAE /* RadarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F4FE261BC40A5600F24AAE /* RadarsViewController.m */; settings = {ASSET_TAGS = (); }; };
+		B4F4FE2A1BC41ABF00F24AAE /* EditRadarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F4FE291BC41ABF00F24AAE /* EditRadarViewController.m */; settings = {ASSET_TAGS = (); }; };
+		B4F4FE2F1BC507BA00F24AAE /* RadarApiWapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F4FE2E1BC507BA00F24AAE /* RadarApiWapper.m */; settings = {ASSET_TAGS = (); }; };
+		B4F4FE331BC51D4600F24AAE /* JSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F4FE321BC51D4600F24AAE /* JSONParser.m */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B4F4FDE71BC3CFB600F24AAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4F4FDC51BC3CFB500F24AAE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4F4FDCC1BC3CFB500F24AAE;
+			remoteInfo = RadarProject;
+		};
+		B4F4FDF21BC3CFB600F24AAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4F4FDC51BC3CFB500F24AAE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4F4FDCC1BC3CFB500F24AAE;
+			remoteInfo = RadarProject;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B43695541BC54D7D00F08887 /* JSONParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONParserTests.m; sourceTree = "<group>"; };
+		B43695571BC5584800F08887 /* OneRadarResultStub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = OneRadarResultStub.json; sourceTree = "<group>"; };
+		B436955A1BC562DC00F08887 /* StubFileUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StubFileUtil.h; sourceTree = "<group>"; };
+		B436955B1BC562DC00F08887 /* StubFileUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StubFileUtil.m; sourceTree = "<group>"; };
+		B436955D1BC56D5B00F08887 /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
+		B480D2581BC6B78800560144 /* JSONRadarMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONRadarMapper.h; path = ../Utils/JSONModelMapper/JSONRadarMapper.h; sourceTree = "<group>"; };
+		B480D2591BC6B78800560144 /* JSONRadarMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONRadarMapper.m; path = ../Utils/JSONModelMapper/JSONRadarMapper.m; sourceTree = "<group>"; };
+		B480D25C1BC6C96800560144 /* RadarsViewController+ACNSFetchResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RadarsViewController+ACNSFetchResultsController.h"; sourceTree = "<group>"; };
+		B480D25D1BC6C96800560144 /* RadarsViewController+ACNSFetchResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RadarsViewController+ACNSFetchResultsController.m"; sourceTree = "<group>"; };
+		B480D25F1BC6CE0800560144 /* EmptyRadarsArrayStub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = EmptyRadarsArrayStub.json; sourceTree = "<group>"; };
+		B480D2611BC6CE4300560144 /* TenRadarResultStub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TenRadarResultStub.json; sourceTree = "<group>"; };
+		B4D40EB01BC67C1F00484221 /* RadarJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RadarJSON.h; path = ../Utils/JSONModelMapper/RadarJSON.h; sourceTree = "<group>"; };
+		B4D40EB11BC67C1F00484221 /* RadarJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RadarJSON.m; path = ../Utils/JSONModelMapper/RadarJSON.m; sourceTree = "<group>"; };
+		B4F4FDCD1BC3CFB500F24AAE /* RadarProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RadarProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4F4FDD11BC3CFB500F24AAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B4F4FDD31BC3CFB500F24AAE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B4F4FDD41BC3CFB500F24AAE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B4F4FDDA1BC3CFB500F24AAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B4F4FDDC1BC3CFB500F24AAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B4F4FDDF1BC3CFB500F24AAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B4F4FDE11BC3CFB500F24AAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4F4FDE61BC3CFB600F24AAE /* RadarProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RadarProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4F4FDEC1BC3CFB600F24AAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4F4FDF11BC3CFB600F24AAE /* RadarProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RadarProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4F4FDF51BC3CFB600F24AAE /* RadarProjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RadarProjectUITests.m; sourceTree = "<group>"; };
+		B4F4FDF71BC3CFB600F24AAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4F4FE031BC3D05800F24AAE /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
+		B4F4FE041BC3D05800F24AAE /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		B4F4FE061BC3D07500F24AAE /* SharedCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedCoreDataStack.h; sourceTree = "<group>"; };
+		B4F4FE071BC3D07500F24AAE /* SharedCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedCoreDataStack.m; sourceTree = "<group>"; };
+		B4F4FE0C1BC3D10400F24AAE /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		B4F4FE0E1BC3D2C800F24AAE /* Radar+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Radar+CoreDataProperties.h"; sourceTree = "<group>"; };
+		B4F4FE0F1BC3D2C800F24AAE /* Radar+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Radar+CoreDataProperties.m"; sourceTree = "<group>"; };
+		B4F4FE101BC3D2C800F24AAE /* Radar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Radar.h; sourceTree = "<group>"; };
+		B4F4FE111BC3D2C800F24AAE /* Radar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Radar.m; sourceTree = "<group>"; };
+		B4F4FE141BC3D36B00F24AAE /* RadarsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarsTests.m; sourceTree = "<group>"; };
+		B4F4FE161BC3D71300F24AAE /* FileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileUtils.h; sourceTree = "<group>"; };
+		B4F4FE171BC3D71300F24AAE /* FileUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileUtils.m; sourceTree = "<group>"; };
+		B4F4FE1C1BC3DED100F24AAE /* NSManagedObjectContext+ACInsertManageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+ACInsertManageObject.h"; sourceTree = "<group>"; };
+		B4F4FE1D1BC3DED100F24AAE /* NSManagedObjectContext+ACInsertManageObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+ACInsertManageObject.m"; sourceTree = "<group>"; };
+		B4F4FE1F1BC3F80100F24AAE /* FakeRadarGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeRadarGenerator.h; sourceTree = "<group>"; };
+		B4F4FE201BC3F80100F24AAE /* FakeRadarGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeRadarGenerator.m; sourceTree = "<group>"; };
+		B4F4FE221BC406FA00F24AAE /* RadarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadarCell.h; sourceTree = "<group>"; };
+		B4F4FE231BC406FA00F24AAE /* RadarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarCell.m; sourceTree = "<group>"; };
+		B4F4FE251BC40A5600F24AAE /* RadarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadarsViewController.h; sourceTree = "<group>"; };
+		B4F4FE261BC40A5600F24AAE /* RadarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarsViewController.m; sourceTree = "<group>"; };
+		B4F4FE281BC41ABF00F24AAE /* EditRadarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditRadarViewController.h; sourceTree = "<group>"; };
+		B4F4FE291BC41ABF00F24AAE /* EditRadarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditRadarViewController.m; sourceTree = "<group>"; };
+		B4F4FE2C1BC505C000F24AAE /* RadarAPIWebServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadarAPIWebServiceProtocol.h; sourceTree = "<group>"; };
+		B4F4FE2D1BC507BA00F24AAE /* RadarApiWapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadarApiWapper.h; sourceTree = "<group>"; };
+		B4F4FE2E1BC507BA00F24AAE /* RadarApiWapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarApiWapper.m; sourceTree = "<group>"; };
+		B4F4FE311BC51D4600F24AAE /* JSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONParser.h; sourceTree = "<group>"; };
+		B4F4FE321BC51D4600F24AAE /* JSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONParser.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B4F4FDCA1BC3CFB500F24AAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4F4FDE31BC3CFB600F24AAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4F4FDEE1BC3CFB600F24AAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B43695561BC5580B00F08887 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				B43695571BC5584800F08887 /* OneRadarResultStub.json */,
+				B480D25F1BC6CE0800560144 /* EmptyRadarsArrayStub.json */,
+				B480D2611BC6CE4300560144 /* TenRadarResultStub.json */,
+			);
+			name = Stubs;
+			sourceTree = "<group>";
+		};
+		B43695591BC562BB00F08887 /* TestUtils */ = {
+			isa = PBXGroup;
+			children = (
+				B436955A1BC562DC00F08887 /* StubFileUtil.h */,
+				B436955B1BC562DC00F08887 /* StubFileUtil.m */,
+			);
+			name = TestUtils;
+			sourceTree = "<group>";
+		};
+		B480D25B1BC6C73000560144 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				B480D2581BC6B78800560144 /* JSONRadarMapper.h */,
+				B480D2591BC6B78800560144 /* JSONRadarMapper.m */,
+			);
+			name = Mapper;
+			sourceTree = "<group>";
+		};
+		B4F4FDC41BC3CFB500F24AAE = {
+			isa = PBXGroup;
+			children = (
+				B4F4FDCE1BC3CFB500F24AAE /* Products */,
+				B4F4FDCF1BC3CFB500F24AAE /* RadarProject */,
+				B4F4FDE91BC3CFB600F24AAE /* RadarProjectTests */,
+				B4F4FDF41BC3CFB600F24AAE /* RadarProjectUITests */,
+			);
+			sourceTree = "<group>";
+		};
+		B4F4FDCE1BC3CFB500F24AAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B4F4FDCD1BC3CFB500F24AAE /* RadarProject.app */,
+				B4F4FDE61BC3CFB600F24AAE /* RadarProjectTests.xctest */,
+				B4F4FDF11BC3CFB600F24AAE /* RadarProjectUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B4F4FDCF1BC3CFB500F24AAE /* RadarProject */ = {
+			isa = PBXGroup;
+			children = (
+				B4F4FE1A1BC3D77E00F24AAE /* Controller */,
+				B4F4FE091BC3D07C00F24AAE /* CoreData */,
+				B4F4FE0A1BC3D0C700F24AAE /* Model */,
+				B4F4FDD01BC3CFB500F24AAE /* Supporting Files */,
+				B4F4FE1B1BC3DDD200F24AAE /* Utils */,
+				B4F4FE191BC3D76300F24AAE /* View */,
+				B4F4FDD31BC3CFB500F24AAE /* AppDelegate.h */,
+				B4F4FDD41BC3CFB500F24AAE /* AppDelegate.m */,
+				B4F4FDDC1BC3CFB500F24AAE /* Assets.xcassets */,
+				B4F4FDE11BC3CFB500F24AAE /* Info.plist */,
+				B4F4FDDE1BC3CFB500F24AAE /* LaunchScreen.storyboard */,
+			);
+			path = RadarProject;
+			sourceTree = "<group>";
+		};
+		B4F4FDD01BC3CFB500F24AAE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B4F4FDD11BC3CFB500F24AAE /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B4F4FDE91BC3CFB600F24AAE /* RadarProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				B43695591BC562BB00F08887 /* TestUtils */,
+				B43695561BC5580B00F08887 /* Stubs */,
+				B4F4FDEC1BC3CFB600F24AAE /* Info.plist */,
+				B43695541BC54D7D00F08887 /* JSONParserTests.m */,
+				B4F4FE141BC3D36B00F24AAE /* RadarsTests.m */,
+			);
+			path = RadarProjectTests;
+			sourceTree = "<group>";
+		};
+		B4F4FDF41BC3CFB600F24AAE /* RadarProjectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B4F4FDF71BC3CFB600F24AAE /* Info.plist */,
+				B4F4FDF51BC3CFB600F24AAE /* RadarProjectUITests.m */,
+			);
+			path = RadarProjectUITests;
+			sourceTree = "<group>";
+		};
+		B4F4FE091BC3D07C00F24AAE /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				B4F4FE031BC3D05800F24AAE /* CoreDataStack.h */,
+				B4F4FE041BC3D05800F24AAE /* CoreDataStack.m */,
+				B4F4FE161BC3D71300F24AAE /* FileUtils.h */,
+				B4F4FE171BC3D71300F24AAE /* FileUtils.m */,
+				B4F4FE061BC3D07500F24AAE /* SharedCoreDataStack.h */,
+				B4F4FE071BC3D07500F24AAE /* SharedCoreDataStack.m */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		B4F4FE0A1BC3D0C700F24AAE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B480D25B1BC6C73000560144 /* Mapper */,
+				B4F4FE0B1BC3D10400F24AAE /* Model.xcdatamodeld */,
+				B4F4FE0E1BC3D2C800F24AAE /* Radar+CoreDataProperties.h */,
+				B4F4FE0F1BC3D2C800F24AAE /* Radar+CoreDataProperties.m */,
+				B4F4FE101BC3D2C800F24AAE /* Radar.h */,
+				B4F4FE111BC3D2C800F24AAE /* Radar.m */,
+				B4D40EB01BC67C1F00484221 /* RadarJSON.h */,
+				B4D40EB11BC67C1F00484221 /* RadarJSON.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B4F4FE191BC3D76300F24AAE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B4F4FDD91BC3CFB500F24AAE /* Main.storyboard */,
+				B4F4FE221BC406FA00F24AAE /* RadarCell.h */,
+				B4F4FE231BC406FA00F24AAE /* RadarCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4F4FE1A1BC3D77E00F24AAE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B4F4FE281BC41ABF00F24AAE /* EditRadarViewController.h */,
+				B4F4FE291BC41ABF00F24AAE /* EditRadarViewController.m */,
+				B4F4FE251BC40A5600F24AAE /* RadarsViewController.h */,
+				B4F4FE261BC40A5600F24AAE /* RadarsViewController.m */,
+				B480D25C1BC6C96800560144 /* RadarsViewController+ACNSFetchResultsController.h */,
+				B480D25D1BC6C96800560144 /* RadarsViewController+ACNSFetchResultsController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B4F4FE1B1BC3DDD200F24AAE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B4F4FE301BC51C8700F24AAE /* JSONModelMapper */,
+				B4F4FE2B1BC5054200F24AAE /* Network */,
+				B4F4FE1F1BC3F80100F24AAE /* FakeRadarGenerator.h */,
+				B4F4FE201BC3F80100F24AAE /* FakeRadarGenerator.m */,
+				B4F4FE1C1BC3DED100F24AAE /* NSManagedObjectContext+ACInsertManageObject.h */,
+				B4F4FE1D1BC3DED100F24AAE /* NSManagedObjectContext+ACInsertManageObject.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B4F4FE2B1BC5054200F24AAE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B4F4FE2C1BC505C000F24AAE /* RadarAPIWebServiceProtocol.h */,
+				B4F4FE2D1BC507BA00F24AAE /* RadarApiWapper.h */,
+				B4F4FE2E1BC507BA00F24AAE /* RadarApiWapper.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B4F4FE301BC51C8700F24AAE /* JSONModelMapper */ = {
+			isa = PBXGroup;
+			children = (
+				B4F4FE311BC51D4600F24AAE /* JSONParser.h */,
+				B4F4FE321BC51D4600F24AAE /* JSONParser.m */,
+			);
+			path = JSONModelMapper;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B4F4FDCC1BC3CFB500F24AAE /* RadarProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4F4FDFA1BC3CFB600F24AAE /* Build configuration list for PBXNativeTarget "RadarProject" */;
+			buildPhases = (
+				B4F4FDC91BC3CFB500F24AAE /* Sources */,
+				B4F4FDCA1BC3CFB500F24AAE /* Frameworks */,
+				B4F4FDCB1BC3CFB500F24AAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RadarProject;
+			productName = RadarProject;
+			productReference = B4F4FDCD1BC3CFB500F24AAE /* RadarProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B4F4FDE51BC3CFB600F24AAE /* RadarProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4F4FDFD1BC3CFB600F24AAE /* Build configuration list for PBXNativeTarget "RadarProjectTests" */;
+			buildPhases = (
+				B4F4FDE21BC3CFB600F24AAE /* Sources */,
+				B4F4FDE31BC3CFB600F24AAE /* Frameworks */,
+				B4F4FDE41BC3CFB600F24AAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B4F4FDE81BC3CFB600F24AAE /* PBXTargetDependency */,
+			);
+			name = RadarProjectTests;
+			productName = RadarProjectTests;
+			productReference = B4F4FDE61BC3CFB600F24AAE /* RadarProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B4F4FDF01BC3CFB600F24AAE /* RadarProjectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4F4FE001BC3CFB600F24AAE /* Build configuration list for PBXNativeTarget "RadarProjectUITests" */;
+			buildPhases = (
+				B4F4FDED1BC3CFB600F24AAE /* Sources */,
+				B4F4FDEE1BC3CFB600F24AAE /* Frameworks */,
+				B4F4FDEF1BC3CFB600F24AAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B4F4FDF31BC3CFB600F24AAE /* PBXTargetDependency */,
+			);
+			name = RadarProjectUITests;
+			productName = RadarProjectUITests;
+			productReference = B4F4FDF11BC3CFB600F24AAE /* RadarProjectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B4F4FDC51BC3CFB500F24AAE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Ainhoa Calviño Rodriguez";
+				TargetAttributes = {
+					B4F4FDCC1BC3CFB500F24AAE = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 5WJ553JC89;
+					};
+					B4F4FDE51BC3CFB600F24AAE = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 5WJ553JC89;
+						TestTargetID = B4F4FDCC1BC3CFB500F24AAE;
+					};
+					B4F4FDF01BC3CFB600F24AAE = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 5WJ553JC89;
+						TestTargetID = B4F4FDCC1BC3CFB500F24AAE;
+					};
+				};
+			};
+			buildConfigurationList = B4F4FDC81BC3CFB500F24AAE /* Build configuration list for PBXProject "RadarProject" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B4F4FDC41BC3CFB500F24AAE;
+			productRefGroup = B4F4FDCE1BC3CFB500F24AAE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B4F4FDCC1BC3CFB500F24AAE /* RadarProject */,
+				B4F4FDE51BC3CFB600F24AAE /* RadarProjectTests */,
+				B4F4FDF01BC3CFB600F24AAE /* RadarProjectUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B4F4FDCB1BC3CFB500F24AAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4F4FDE01BC3CFB500F24AAE /* LaunchScreen.storyboard in Resources */,
+				B4F4FDDD1BC3CFB500F24AAE /* Assets.xcassets in Resources */,
+				B4F4FDDB1BC3CFB500F24AAE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4F4FDE41BC3CFB600F24AAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B480D2601BC6CE0800560144 /* EmptyRadarsArrayStub.json in Resources */,
+				B480D2621BC6CE4300560144 /* TenRadarResultStub.json in Resources */,
+				B43695581BC5584800F08887 /* OneRadarResultStub.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4F4FDEF1BC3CFB600F24AAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B4F4FDC91BC3CFB500F24AAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4F4FE241BC406FA00F24AAE /* RadarCell.m in Sources */,
+				B4F4FE1E1BC3DED100F24AAE /* NSManagedObjectContext+ACInsertManageObject.m in Sources */,
+				B480D25E1BC6C96800560144 /* RadarsViewController+ACNSFetchResultsController.m in Sources */,
+				B480D25A1BC6B78800560144 /* JSONRadarMapper.m in Sources */,
+				B4F4FE081BC3D07500F24AAE /* SharedCoreDataStack.m in Sources */,
+				B4F4FDD51BC3CFB500F24AAE /* AppDelegate.m in Sources */,
+				B4F4FE181BC3D71300F24AAE /* FileUtils.m in Sources */,
+				B4F4FDD21BC3CFB500F24AAE /* main.m in Sources */,
+				B4F4FE2A1BC41ABF00F24AAE /* EditRadarViewController.m in Sources */,
+				B4F4FE211BC3F80100F24AAE /* FakeRadarGenerator.m in Sources */,
+				B4F4FE331BC51D4600F24AAE /* JSONParser.m in Sources */,
+				B4F4FE131BC3D2C800F24AAE /* Radar.m in Sources */,
+				B4D40EB21BC67C1F00484221 /* RadarJSON.m in Sources */,
+				B4F4FE051BC3D05800F24AAE /* CoreDataStack.m in Sources */,
+				B4F4FE2F1BC507BA00F24AAE /* RadarApiWapper.m in Sources */,
+				B4F4FE271BC40A5600F24AAE /* RadarsViewController.m in Sources */,
+				B4F4FE0D1BC3D10400F24AAE /* Model.xcdatamodeld in Sources */,
+				B4F4FE121BC3D2C800F24AAE /* Radar+CoreDataProperties.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4F4FDE21BC3CFB600F24AAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4F4FE151BC3D36B00F24AAE /* RadarsTests.m in Sources */,
+				B436955C1BC562DC00F08887 /* StubFileUtil.m in Sources */,
+				B43695551BC54D7D00F08887 /* JSONParserTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4F4FDED1BC3CFB600F24AAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4F4FDF61BC3CFB600F24AAE /* RadarProjectUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B4F4FDE81BC3CFB600F24AAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4F4FDCC1BC3CFB500F24AAE /* RadarProject */;
+			targetProxy = B4F4FDE71BC3CFB600F24AAE /* PBXContainerItemProxy */;
+		};
+		B4F4FDF31BC3CFB600F24AAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4F4FDCC1BC3CFB500F24AAE /* RadarProject */;
+			targetProxy = B4F4FDF21BC3CFB600F24AAE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B4F4FDD91BC3CFB500F24AAE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4F4FDDA1BC3CFB500F24AAE /* Base */,
+			);
+			name = Main.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+		B4F4FDDE1BC3CFB500F24AAE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4F4FDDF1BC3CFB500F24AAE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B4F4FDF81BC3CFB600F24AAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B4F4FDF91BC3CFB600F24AAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B4F4FDFB1BC3CFB600F24AAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RadarProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Kiply.RadarProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B4F4FDFC1BC3CFB600F24AAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RadarProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Kiply.RadarProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B4F4FDFE1BC3CFB600F24AAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RadarProjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Kiply.RadarProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RadarProject.app/RadarProject";
+			};
+			name = Debug;
+		};
+		B4F4FDFF1BC3CFB600F24AAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RadarProjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Kiply.RadarProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RadarProject.app/RadarProject";
+			};
+			name = Release;
+		};
+		B4F4FE011BC3CFB600F24AAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RadarProjectUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Kiply.RadarProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RadarProject;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		B4F4FE021BC3CFB600F24AAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RadarProjectUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Kiply.RadarProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RadarProject;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B4F4FDC81BC3CFB500F24AAE /* Build configuration list for PBXProject "RadarProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4F4FDF81BC3CFB600F24AAE /* Debug */,
+				B4F4FDF91BC3CFB600F24AAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4F4FDFA1BC3CFB600F24AAE /* Build configuration list for PBXNativeTarget "RadarProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4F4FDFB1BC3CFB600F24AAE /* Debug */,
+				B4F4FDFC1BC3CFB600F24AAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4F4FDFD1BC3CFB600F24AAE /* Build configuration list for PBXNativeTarget "RadarProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4F4FDFE1BC3CFB600F24AAE /* Debug */,
+				B4F4FDFF1BC3CFB600F24AAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4F4FE001BC3CFB600F24AAE /* Build configuration list for PBXNativeTarget "RadarProjectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4F4FE011BC3CFB600F24AAE /* Debug */,
+				B4F4FE021BC3CFB600F24AAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B4F4FE0B1BC3D10400F24AAE /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B436955D1BC56D5B00F08887 /* Model 2.xcdatamodel */,
+				B4F4FE0C1BC3D10400F24AAE /* Model.xcdatamodel */,
+			);
+			currentVersion = B4F4FE0C1BC3D10400F24AAE /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B4F4FDC51BC3CFB500F24AAE /* Project object */;
+}

@@ -9,6 +9,10 @@
 #import "ArtistService.h"
 #import "Artist.h"
 
+@interface ArtistService ()
+
+@end
+
 @implementation ArtistService
 
 - (void)artistsWithCompletion:(void (^)(NSArray *))completion
@@ -21,7 +25,13 @@
         NSError *errorJSON = nil;
         NSArray *arrayJSON = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&errorJSON];
         
-        NSArray *arrayArtist = [self parserJSON:arrayJSON];
+        NSArray *arrayArtist = [self arrayCached];
+        if (!arrayArtist)
+        {
+            arrayArtist = [self parserJSON:arrayJSON];
+            NSString *folder = [self getPathArtist];
+            [NSKeyedArchiver archiveRootObject:arrayArtist toFile:folder];
+        }
         
         if (completion)
         {
@@ -56,6 +66,36 @@
     }
     
     return [arrayArtist copy];
+}
+
+- (NSArray *)arrayCached
+{
+    NSString *pathArtist = [self getPathArtist];
+    NSArray *array = [[NSArray alloc]init];
+    array = [NSKeyedUnarchiver unarchiveObjectWithFile:pathArtist];
+    
+    if (!pathArtist || !array)
+    {
+        return nil;
+    }
+    
+    return array;
+}
+
+- (NSString *)getPathArtist
+{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString *cacheFolder = [paths firstObject];
+    if ([fileManager fileExistsAtPath:cacheFolder])
+    {
+        return [cacheFolder stringByAppendingPathComponent:@"artist.plist"];
+    }
+    else
+    {
+        return nil;
+    }
+    
 }
 
 @end
